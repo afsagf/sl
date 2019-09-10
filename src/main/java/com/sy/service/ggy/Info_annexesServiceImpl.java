@@ -1,7 +1,7 @@
 package com.sy.service.ggy;
 
 import com.sy.mapper.ggy.Info_annexesMapper;
-import com.sy.model.ggy.Info_annexes;
+import com.sy.model.Info_annexes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

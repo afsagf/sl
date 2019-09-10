@@ -5,10 +5,10 @@
     <select id="selectAllUsername" resultType="java.lang.String">
      select loginCode from au_user
     </select>
-    <select id="selectUserByLoginCodeAndPassWord" resultType="com.sy.model.ggy.Au_user" parameterType="com.sy.model.ggy.Au_user">
+    <select id="selectUserByLoginCodeAndPassWord" resultType="com.sy.model.Au_user" parameterType="com.sy.model.Au_user">
      select * from au_user where loginCode=#{loginCode} and password=#{password}
     </select>
-    <select id="selectUserByID" resultType="com.sy.model.ggy.Au_user" >
+    <select id="selectUserByID" resultType="com.sy.model.Au_user" >
      select * from au_user where id=#{id}
     </select>
 </mapper>
