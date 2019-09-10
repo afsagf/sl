@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="../layui/css/layui.css"  media="all">
+    <style>
+        .outContain{
+          width: 500px;
+            position: absolute;
+            left:500px ;
+            top: 120px;
+        }
+        .outContain li{
+            list-style: none;
+            width: 100%;
+            height: 30px;
+            /*border: 1px solid red;*/
+
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        .outContain ul{
+            margin-left: 10px;
+        }
+        .outContain li .layui-icon{
+          margin-right: 10px;
+           color: #ff561b;
+        }
+        .notice{
+            float: left;
+        }
+        .more{
+            float: right;
+            margin-right: 20px;
+        }
+        .title{
+            height: 30px;
+            width: 100%;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+<div id="menu">
+
+</div>
+<div class="outContain">
+    <div class="title">
+        <div class="notice"><i class="layui-icon">&#xe623;</i>公告栏</div>
+        <div class="more">»更多</span></div>
+    </div>
+    <hr>
+    <ul>
+        <li>
+            <div class="left"><i class="layui-icon">&#xe609;</i>多行为损害了经销商和公司的利益</div>
+            <div class="right">2013-12-13</div>
+        </li>
+        <li>
+            <div class="left">多行为损害了经销商和公司的利益</div>
+            <div class="right">2013-12-13</div>
+        </li>
+    </ul>
+    <div class="title">
+        <div class="notice"><i class="layui-icon">&#xe623;</i>公告栏</div>
+        <div class="more">»更多</span></div>
+    </div>
+    <hr>
+    <ul>
+        <li>
+            <div class="left"><i class="layui-icon">&#xe609;</i>多行为损害了经销商和公司的利益</div>
+            <div class="right">2013-12-13</div>
+        </li>
+        <li>
+            <div class="left">多行为损害了经销商和公司的利益</div>
+            <div class="right">2013-12-13</div>
+        </li>
+    </ul>
+</div>
+
+
+
+
+<script src="../layui/layui.all.js"></script>
+<script src="../jquery/jquery.js"></script>
+<script>
+    $("#menu").load("SLmain.html")
+</script>
+</body>
+</html>
