@@ -55,8 +55,12 @@ public class Au_userController {
             baseResp.setSuccess(Constant.ERROR);
             baseResp.setErrorMsg("获取登录者接口服务器错误！");
         }
-
-
         return baseResp;
+    }
+    //注销
+    @RequestMapping(value = "/regist" )
+    public int regist( HttpServletRequest request){
+        request.getSession().removeAttribute("user");
+        return Constant.SUCCESS;
     }
 }
