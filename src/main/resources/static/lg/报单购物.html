@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../jquery/jquery.js"></script>
+        <link rel="stylesheet" href="../layui/css/layui.css">
+    </head>
+    <body>
+        <div>
+            <div>
+                <h2>购物管理   》报单购货</h2>
+            </div>
+            <hr class="layui-bg-black">
+            <i class="layui-icon"style="font-size: 20px; color: #1E9FFF;">&#xe607;</i> <span style="font-size:20px ">   说明</span>
+                <div class="explain">
+                    <div>
+                        <ul>
+                            <li>
+                                · 购货分
+                                <ol>
+                                    <li>
+                                        <br><p style="text-indent: 30px">①“报单购货”：使用基本帐户中的款项，“报单购货”后一定要“确认激活”此购货单才有效。</p>
+                                    </li>
+                                    <li>
+                                        <br><p style="text-indent: 30px">② “重消购货”：使用消费帐户中的款项，“重消购货”不需要“确认激活”。</p>
+                                    </li>
+                                    <li>
+                                        <br><p style="text-indent: 30px">③“辅消购货”：使用基本帐户中的款项，“辅消购货”不需要“确认激活”。</p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <br>· “确认激活”完成2项工作，确认“报单购货”的购货单有效，为新会员安排左右区位置。
+                            </li>
+                            <li>
+                                <br>· 购货单一旦确认、左右区位置一旦安排将不能更改，因此请慎重操作”。
+                            </li>
+                            <li>
+                                <br>· “确认激活”前要检查基本帐户的余额是否大于等于购货款，如果不足要及时为基本帐户汇款充值。
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="float: right">
+                        <button type="button" class="layui-btn layui-btn-normal continue"> 好的继续</button>
+
+                    </div>
+                </div>
+                <div class="chooseuser" style="display: none">
+                    报单购货会员用户名：<input type="text">
+                    <button type="button" class="layui-btn layui-btn-normal next"> 下一步</button>
+                </div>
+
+        </div>
+    </body>
+
+    <script>
+        $(".next").click(f)
+        $(".continue").click(e)
+       function f() {
+          window.location.href="/static/lg/报单购物表单.html"
+       }
+       function e() {
+           $(".chooseuser").css('display','block')
+           $(".explain").css('display','none')
+       }
+    </script>
+</html>

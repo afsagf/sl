@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../jquery/jquery.js"></script>
+        <link rel="stylesheet" href="../layui/css/layui.css">
+    </head>
+    <body>
+        <div>
+            <h2>购物管理   》报单购货</h2>
+        </div>
+        <hr class="layui-bg-black">
+        <div>
+            <p>当前余额：                3800元   <a href="" style="color: #01AAED;margin-left: 20px">   余额不足？马上汇款</a></p>
+            报单购货会员用户名：<input type="text">
+            <br>
+            以下报单級別必须选择其一:
+
+            <div class="layui-row layui-col-space10">
+                <div class="layui-col-md4">
+                    <input type="radio" name="category" value="消費会员：" title="消費会员：">
+                    <br>
+                    <br>
+                    消费金额：4600元
+                    <br>
+                    PV ： 300
+                    <br>
+                    综合服务费： 690元
+                </div>
+                <div class="layui-col-md4">
+                    <input type="radio" name="category" value="VIP会员：" title="VIP会员：">
+                    <br>
+                    <br>
+                    消费金额 ：14600元
+                    <br>
+                    PV： 900
+                    <br>
+                    综合服务费： 1500元
+                </div>
+                <div class="layui-col-md4">
+                    <input type="radio" name="category" value="加盟店：" title="加盟店：">
+                    <br>
+                    <br>
+                    消费金额28800元
+                    <br>
+                    PV：1500
+                    <br>
+                    服务费 2800元
+                </div>
+            </div>
+            <div>
+                收货地址：   中国中关村112号
+                <br>
+                快递类型：    EMS
+                <br>
+                邮编：        01010
+            </div>
+            <div style="float: right">
+                <button type="button" class="layui-btn layui-btn-normal next"> 下一步</button>
+            </div>
+        </div>
+        <!--<div>-->
+            <!--<i class="layui-icon" style="color: mediumspringgreen">&#xe605;报单购货成功</i>-->
+            <!--<br>-->
+            <!--<p style="color: #01AAED">马上去激活购货吗？</p>-->
+        <!--</div>-->
+
+
+    </body>
+    <script src="../layui/layui.all.js"></script>
+    <script>
+        $(".next").click(function () {
+            layer.open({
+                type: 1,
+                title:'确认报单购货信息',
+                content:'<div>\n' +
+                    '            <p>报单购货会员用户名：sl_user03</p><br>\n' +
+                    '            <p>收货国家（地区）：中国</p><br>\n' +
+                    '            <p>报单級別：消費会员（消费金额：4600元、PV :300、综合服务费： 690元)</p><br>\n' +
+                    '            <p>总计金额：5290</p><br>\n' +
+                    '            <p>收货地址：中国 中关村大街112号</p><br>\n' +
+                    '            <p>邮编：01010</p><br>\n' +
+                    '            <p>快递类型：EMS    </p>\n' +
+                    '            <input type="password" style="color: red">请输入二级密码<br><br><br><br>\n' +
+                    '            <a href="" style="color: #01AAED;margin-left: 20px">   余额不足？马上汇款</a><br>\n' +
+                    '\n' +
+                    '\n' +
+                    '\n' +
+                    '        </div>',
+                area:['500px', '480px'],
+                btn: ['确认', '关闭'],
+                btnAlign: 'c',
+                success: function(layero) {
+                    var btn = layero.find('.layui-layer-btn');
+                    btn.find('.layui-layer-btn0').click(function () {
+                        layer.open({
+                            type: 1,
+                            title:'提示',
+                            content:'<div>\n' +
+                                '            <br><i  class="layui-icon" style="color: mediumspringgreen;margin-left: 40px">&#xe605;报单购货成功</i>\n' +
+                                '            <br><br>\n' +
+                                '            <p style="color: #01AAED;margin-left: 40px">马上去激活购货吗？</p>\n' +
+                                '        </div>',
+                            area:['200px', '200px'],
+                            btn: ['去激活', '暂不'],
+                            btnAlign: 'c',
+                            success: function(layero) {
+                                var btn = layero.find('.layui-layer-btn');
+                                btn.find('.layui-layer-btn0').attr({
+                                    href: 'http://www.layui.com/'
+                                    ,target: '_blank'
+                                })
+                            }
+
+                        })
+                    })
+
+
+
+                }
+            })
+
+
+        })
+    </script>
+
+</html>

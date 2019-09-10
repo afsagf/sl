@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../jquery/jquery.js"></script>
+        <link rel="stylesheet" href="../layui/css/layui.css">
+    </head>
+    <body>
+        <div>
+            <h2>购物管理   》重销购货</h2>
+        </div>
+        <hr class="layui-bg-black">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">编号</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">套餐标题</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="title" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <button type="button" class="layui-btn layui-btn-normal">查询</button>
+            </div>
+        </form>
+
+        <table class="layui-table">
+            <colgroup>
+                <col width="150">
+                <col width="200">
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>选择</th>
+                    <th>编号</th>
+                    <th>套餐标题</th>
+                    <th>零售价</th>
+                    <th>优惠价</th>
+                    <th>说明</th>
+                    <th>数量</th>
+                </tr>
+            </thead>
+            <tbody id="list">
+                <!--<tr>-->
+                    <!--<td><input type="checkbox"name="vid"></td>-->
+                    <!--<td>vid</td>-->
+                    <!--<td>标题</td>-->
+                    <!--<td>5000</td>-->
+                    <!--<td>4000</td>-->
+                    <!--<td>骗人的鬼</td>-->
+                    <!--<td><input type="text"></td>-->
+                <!--</tr>-->
+
+            </tbody>
+        </table>
+        <div style=" text-align:center">
+            <div id="demo20" style="color: #01AAED"></div>
+        </div>
+        
+    </body>
+    <script src="../layui/layui.all.js"></script>
+    <script>
+        layui.use(['laypage', 'layer'], function(){
+            var laypage = layui.laypage
+                ,layer = layui.layer;
+            //模拟
+            var data=[{"id":4,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":3,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},];
+            //分页
+            laypage.render({
+                elem: 'demo20'
+                ,count: data.length
+                ,jump: function(obj){
+                    //模拟渲染
+                    document.getElementById('list').innerHTML = function(){
+                        var arr = []
+                            ,thisData = data.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+                        layui.each(thisData, function(index, item){
+                            arr.push(`<tr>
+                    <td><input type="checkbox"name="vid"></td>
+                    <td>`+item.id+`</td>
+                    <td>`+item.name+`</td>
+                    <td>`+item.name+`</td>
+                    <td>`+item.name+`</td>
+                    <td>`+item.name+`</td>
+                    <td><input type="text"></td>
+                </tr>`);
+                        });
+                        return arr.join('');
+                    }();
+                }
+            });
+        })
+    </script>
+</html>
