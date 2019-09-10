@@ -1,6 +1,6 @@
 package com.sy.mapper.ggy;
 
-import com.sy.model.ggy.Au_function;
+import com.sy.model.Au_function;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sy.mapper.wzx.AfficheMapper">
+
+    <!--插入-->
+    <insert id="insert" parameterType="Affiche"></insert>
+
+    <!--更新-->
+    <update id="update" parameterType="Affiche"></update>
+
+    <!--删除-->
+    <delete id="delete"></delete>
+
+    <!--管理员查看 逾期不显示-->
+    <select id="selectById" resultType="Affiche"></select>
+
+    <!--用户查看   逾期不显示-->
+    <select id="selectAll" resultType="Affiche"></select>
+
+
+</mapper>

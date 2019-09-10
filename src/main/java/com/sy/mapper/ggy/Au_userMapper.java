@@ -1,6 +1,6 @@
 package com.sy.mapper.ggy;
 
-import com.sy.model.ggy.Au_user;
+import com.sy.model.Au_user;
 
 import java.util.List;
 

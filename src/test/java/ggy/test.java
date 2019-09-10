@@ -20,6 +20,6 @@ public class test {
     Au_functionService au_functionService;
     @Test
     public void test() throws Exception {
-//        System.out.println(au_functionService.findByIdAndparentId(1l));
+        System.out.println(au_functionService.findByIdAndparentId(1l));
     }
 }

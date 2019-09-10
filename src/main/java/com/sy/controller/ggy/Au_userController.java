@@ -1,17 +1,15 @@
 package com.sy.controller.ggy;
 
-import com.sy.model.ggy.Au_user;
-import com.sy.model.ggy.resp.BaseResp;
-import com.sy.model.ggy.resp.Constant;
+import com.sy.model.Au_user;
+import com.sy.model.resp.BaseResp;
+import com.sy.model.resp.Constant;
 import com.sy.service.ggy.Au_functionService;
 import com.sy.service.ggy.Au_userService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
