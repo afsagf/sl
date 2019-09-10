@@ -1,9 +1,9 @@
 package com.sy.service.ggy;
 
 import com.sy.mapper.ggy.Au_userMapper;
-import com.sy.model.ggy.Au_user;
-import com.sy.model.ggy.resp.BaseResp;
-import com.sy.model.ggy.resp.Constant;
+import com.sy.model.Au_user;
+import com.sy.model.resp.BaseResp;
+import com.sy.model.resp.Constant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

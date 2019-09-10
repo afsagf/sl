@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sy.mapper.wzx.Leave_messageMapper">
+
+    <!--插入-->
+    <insert id="insert" parameterType="Leave_message"></insert>
+
+
+    <!--删除-->
+    <delete id="delete"></delete>
+
+
+    <!--查看 仅用于管理员-->
+    <select id="select" resultType="Leave_message"></select>
+
+
+
+</mapper>

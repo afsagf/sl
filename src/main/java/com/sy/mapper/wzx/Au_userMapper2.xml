@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sy.mapper.wzx.Au_userMapper2">
+
+    <!--新增用户-->
+    <insert id="insert" parameterType="Au_user"></insert>
+
+
+    <!--检查用户 动态sql-->
+    <select id="selectByUser" parameterType="Au_user"></select>
+
+
+    <!--更新用户-->
+    <update id="updateByUser" parameterType="Au_user"></update>
+
+
+    <!--删除用户-->
+    <delete id="deleteById"></delete>
+
+
+    <!--修改登录密码-->
+    <update id="updateLoginPwd"></update>
+
+
+    <!--修改二级密码-->
+    <update id="updateSecondPwd"></update>
+
+
+</mapper>

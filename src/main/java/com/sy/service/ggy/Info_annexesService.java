@@ -1,6 +1,6 @@
 package com.sy.service.ggy;
 
-import com.sy.model.ggy.Info_annexes;
+import com.sy.model.Info_annexes;
 
 import java.util.List;
 

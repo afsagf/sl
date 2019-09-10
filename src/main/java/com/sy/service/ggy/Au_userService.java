@@ -1,7 +1,7 @@
 package com.sy.service.ggy;
 
-import com.sy.model.ggy.Au_user;
-import com.sy.model.ggy.resp.BaseResp;
+import com.sy.model.Au_user;
+import com.sy.model.resp.BaseResp;
 
 public interface Au_userService {
     //登入验证
