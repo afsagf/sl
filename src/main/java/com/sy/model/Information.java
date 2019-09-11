@@ -11,21 +11,39 @@ public class Information {
 
     private String publisher;
 
-    private Date publishtime;
+    private Date publishTime;
 
-    private Integer typeid;
+    private Integer typeId;
 
-    private String typename;
+    private String typeName;
 
-    private String filename;
+    private String fileName;
 
-    private String filepath;
+    private String filePath;
 
-    private Double filesize;
+    private Double fileSize;
 
-    private Date uploadtime;
+    private Date uploadTime;
 
     private String content;
+
+    @Override
+    public String toString() {
+        return "Information{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", state=" + state +
+                ", publisher='" + publisher + '\'' +
+                ", publishTime=" + publishTime +
+                ", typeId=" + typeId +
+                ", typeName='" + typeName + '\'' +
+                ", fileName='" + fileName + '\'' +
+                ", filePath='" + filePath + '\'' +
+                ", fileSize=" + fileSize +
+                ", uploadTime=" + uploadTime +
+                ", content='" + content + '\'' +
+                '}';
+    }
 
     public Long getId() {
         return id;
@@ -59,60 +77,60 @@ public class Information {
         this.publisher = publisher;
     }
 
-    public Date getPublishtime() {
-        return publishtime;
+    public Date getPublishTime() {
+        return publishTime;
     }
 
-    public void setPublishtime(Date publishtime) {
-        this.publishtime = publishtime;
+    public void setPublishTime(Date publishTime) {
+        this.publishTime = publishTime;
     }
 
-    public Integer getTypeid() {
-        return typeid;
+    public Integer getTypeId() {
+        return typeId;
     }
 
-    public void setTypeid(Integer typeid) {
-        this.typeid = typeid;
+    public void setTypeId(Integer typeId) {
+        this.typeId = typeId;
     }
 
-    public String getTypename() {
-        return typename;
+    public String getTypeName() {
+        return typeName;
     }
 
-    public void setTypename(String typename) {
-        this.typename = typename;
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
     }
 
-    public String getFilename() {
-        return filename;
+    public String getFileName() {
+        return fileName;
     }
 
-    public void setFilename(String filename) {
-        this.filename = filename;
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
 
-    public String getFilepath() {
-        return filepath;
+    public String getFilePath() {
+        return filePath;
     }
 
-    public void setFilepath(String filepath) {
-        this.filepath = filepath;
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
     }
 
-    public Double getFilesize() {
-        return filesize;
+    public Double getFileSize() {
+        return fileSize;
     }
 
-    public void setFilesize(Double filesize) {
-        this.filesize = filesize;
+    public void setFileSize(Double fileSize) {
+        this.fileSize = fileSize;
     }
 
-    public Date getUploadtime() {
-        return uploadtime;
+    public Date getUploadTime() {
+        return uploadTime;
     }
 
-    public void setUploadtime(Date uploadtime) {
-        this.uploadtime = uploadtime;
+    public void setUploadTime(Date uploadTime) {
+        this.uploadTime = uploadTime;
     }
 
     public String getContent() {

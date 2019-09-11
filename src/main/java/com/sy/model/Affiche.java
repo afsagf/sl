@@ -6,18 +6,42 @@ public class Affiche {
     private Long id;
 
     private String code;
+    private Integer state;
 
     private String title;
 
     private String publisher;
 
-    private Date publishtime;
+    private Date publishTime;
 
-    private Date starttime;
+    private Date startTime;
 
-    private Date endtime;
+    private Date endTime;
 
     private String content;
+
+    @Override
+    public String toString() {
+        return "Affiche{" +
+                "id=" + id +
+                ", code='" + code + '\'' +
+                ", state=" + state +
+                ", title='" + title + '\'' +
+                ", publisher='" + publisher + '\'' +
+                ", publishTime=" + publishTime +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", content='" + content + '\'' +
+                '}';
+    }
+
+    public Integer getState() {
+        return state;
+    }
+
+    public void setState(Integer state) {
+        this.state = state;
+    }
 
     public Long getId() {
         return id;
@@ -51,28 +75,28 @@ public class Affiche {
         this.publisher = publisher;
     }
 
-    public Date getPublishtime() {
-        return publishtime;
+    public Date getPublishTime() {
+        return publishTime;
     }
 
-    public void setPublishtime(Date publishtime) {
-        this.publishtime = publishtime;
+    public void setPublishTime(Date publishTime) {
+        this.publishTime = publishTime;
     }
 
-    public Date getStarttime() {
-        return starttime;
+    public Date getStartTime() {
+        return startTime;
     }
 
-    public void setStarttime(Date starttime) {
-        this.starttime = starttime;
+    public void setStartTime(Date startTime) {
+        this.startTime = startTime;
     }
 
-    public Date getEndtime() {
-        return endtime;
+    public Date getEndTime() {
+        return endTime;
     }
 
-    public void setEndtime(Date endtime) {
-        this.endtime = endtime;
+    public void setEndTime(Date endTime) {
+        this.endTime = endTime;
     }
 
     public String getContent() {

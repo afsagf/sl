@@ -63,4 +63,18 @@ public class Au_userController {
         request.getSession().removeAttribute("user");
         return Constant.SUCCESS;
     }
+    //查询所有用户（模糊搜）
+    @RequestMapping(value = "/findAll" )
+    public BaseResp findAll(String search,int page,int pageSize,HttpServletRequest request){
+        BaseResp baseResp=new BaseResp();
+        Au_user au_user=(Au_user)request.getSession().getAttribute("user");
+        try {
+            baseResp=au_userService.findAll(search,au_user.getId(),page,pageSize);
+        } catch (Exception e) {
+            e.printStackTrace();
+            baseResp.setSuccess(Constant.ERROR);
+            baseResp.setErrorMsg("服务器异常");
+        }
+        return baseResp;
+    }
 }
