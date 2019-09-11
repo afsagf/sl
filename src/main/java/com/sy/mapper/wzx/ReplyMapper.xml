@@ -3,16 +3,22 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sy.mapper.wzx.ReplyMapper">
 
-    <!--检查是否回复-->
-    <select id="selectByMid" resultType="Reply"></select>
-
-
     <!--插入-->
-    <insert id="insert" parameterType="Reply"></insert>
+    <insert id="insert" parameterType="Reply">
+        insert into reply (messageId,replyContent,createdBy,createTime)
+		values (#{messageId},#{replyContent},#{createdBy},#{createTime})
+    </insert>
 
 
     <!--删除-->
-    <delete id="delete"></delete>
+    <delete id="delete">
+        delete from reply where messageId=#{messageId}
+    </delete>
+
+    <!--通过留言id查看最新回复-->
+    <select id="selectByMid" resultType="reply">
+        select * from reply where mid=#{id} order by createtime limit 0,1
+    </select>
 
 
 </mapper>

@@ -87,4 +87,10 @@
         </where>
     </select>
 
+    <!--查看当前用户-->
+    <select id="selectById" resultType="au_user">
+        select * from au_user where id=#{id}
+    </select>
+
+
 </mapper>

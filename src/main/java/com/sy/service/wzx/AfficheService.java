@@ -1,5 +1,6 @@
 package com.sy.service.wzx;
 
+import com.sy.exception.SLException;
 import com.sy.model.Affiche;
 
 import java.util.List;
@@ -7,18 +8,21 @@ import java.util.List;
 public interface AfficheService {
 
     //插入
-    Integer create(Affiche affiche);
+    boolean create(Long id,Affiche affiche) throws SLException;
 
     //更新
-    Integer modify(Affiche affiche);
+    boolean modify(Affiche affiche) throws SLException;
 
     //删除
-    Integer remove(Integer id);
+    boolean remove(Long id);
 
     //查看 管理员
-    List<Affiche> getById(Integer id);
+    List<Affiche> getByAid(Long id);
 
     //查看 用户
     List<Affiche> getAll();
+
+    //公告详情
+    Affiche getById(Long id);
 
 }

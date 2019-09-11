@@ -4,16 +4,37 @@
 <mapper namespace="com.sy.mapper.wzx.Leave_messageMapper">
 
     <!--插入-->
-    <insert id="insert" parameterType="Leave_message"></insert>
+    <insert id="insert" parameterType="Leave_message">
+        insert into leave_message (messageCode,messageTitle,messageContent,state,createdBy,createTime)
+		values (#{messageCode},#{messageTitle},#{messageContent},#{state},#{createdBy},#{createTime})
+    </insert>
 
 
     <!--删除-->
-    <delete id="delete"></delete>
+    <delete id="delete">
+        delete from leave_message where id=#{id}
+    </delete>
 
 
-    <!--查看 仅用于管理员-->
-    <select id="select" resultType="Leave_message"></select>
+    <!--查看 仅用于管理员 留言时间降序-->
+    <select id="select" resultType="Leave_message">
+        select * from leave_message order by createtime desc
+    </select>
 
+    <!--更新 回复状态-->
+    <update id="update">
+        update leave_message set state=1 where id=#{id}
+    </update>
+
+    <!--查看 通过留言ID-->
+    <select id="selectById" resultType="Leave_message">
+        select * from leave_message where id=#{id}
+    </select>
+
+    <!--用户查看-->
+    <select id="selectByLoginCode" resultType="Leave_message">
+        select * from leave_message where createBy=#{createBy} order by createtime desc
+    </select>
 
 
 </mapper>

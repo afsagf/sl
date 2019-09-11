@@ -1,13 +1,16 @@
 package com.sy.service.wzx;
 
+import com.sy.exception.SLException;
 import com.sy.model.Reply;
 
 public interface ReplyService {
 
     //插入 回复
-    Integer create(Reply reply);
+    boolean create(Reply reply,Long uid) throws SLException;
 
     //删除 回复
-    Integer remove(Integer id);
+    boolean remove(Long id);
+
+
 
 }

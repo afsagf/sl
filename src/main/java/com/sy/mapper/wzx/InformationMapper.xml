@@ -4,18 +4,79 @@
 <mapper namespace="com.sy.mapper.wzx.InformationMapper">
 
     <!--插入-->
-    <insert id="insert" parameterType="Information"></insert>
+    <insert id="insert" parameterType="Information">
+        insert  into information(title,content,state,publisher,publishTime,typeId,typeName,fileName,filePath,fileSize,uploadTime) values (
+		#{title},
+		#{content},
+		#{state},
+		#{publisher},
+		#{publishTime},
+		#{typeId},
+		#{typeName},
+		#{fileName},
+		#{filePath},
+		#{fileSize},
+		#{uploadTime}
+		);
+    </insert>
 
     <!--更新-->
-    <update id="update" parameterType="Information"></update>
+    <update id="update" parameterType="Information">
+        update information
+        <set>
+            <if test="title != null and title!=''">title = #{title},</if>
+            <if test="content != null and content!=''">content = #{content},</if>
+            <if test="state != null">state = #{state},</if>
+            <if test="publisher != null and publisher!=''">publisher = #{publisher},</if>
+            <if test="publishTime != null">publishTime = #{publishTime},</if>
+            <if test="typeId != null">typeId = #{typeId},</if>
+            <if test="typeName != null and typeName!=''">typeName = #{typeName},</if>
+            <if test="fileName != null and fileName!=''">fileName = #{fileName},</if>
+            <if test="filePath != null and filePath!=''">filePath = #{filePath},</if>
+            <if test="fileSize != null">fileSize = #{fileSize},</if>
+            <if test="uploadTime != null">uploadTime = #{uploadTime}</if>
+        </set>
+        where id = #{id}
+    </update>
 
     <!--删除-->
-    <delete id="delete"></delete>
+    <delete id="delete">
+        delete from information where id=#{id}
+    </delete>
 
-    <!--管理员查看 逾期不显示-->
-    <select id="selectById" resultType="Information"></select>
+    <!--管理员查看 时间降序-->
+    <select id="selectByPid" resultType="Information">
+        select * from information where publisher=#{publisher} order by publishTime desc
+    </select>
 
-    <!--用户查看   逾期不显示-->
-    <select id="selectAll" resultType="Information"></select>
+    <!--用户查看   时间降序-->
+    <select id="selectAll" resultType="Information">
+        select * from information order by publishTime desc
+    </select>
+
+    <!--发布状态修改-->
+    <update id="updateState">
+        update information set
+        <if test="state=0">
+            state=1
+        </if>
+        <if test="state=1">
+            state=0
+        </if>
+        where id=#{id}
+    </update>
+
+    <!--检查发布状态-->
+    <select id="selectStateById" resultType="int">
+        select state from information where id=#{id}
+    </select>
+
+
+    <!--资讯详情-->
+    <select id="selectById" resultType="information">
+        select * from information where id=#{id}
+    </select>
+
+
 
 </mapper>

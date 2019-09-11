@@ -16,7 +16,7 @@ public interface AfficheMapper {
     Integer update(Affiche affiche);
 
     //删除
-    Integer delete(Integer id);
+    Integer delete(Long id);
 
     //查看 管理员
     List<Affiche> selectByAdmin(String loginCode);
@@ -25,7 +25,7 @@ public interface AfficheMapper {
     List<Affiche> selectAll();
 
     //修改时查看
-    Affiche selectByAid(Integer id);
+    Affiche selectByAid(Long id);
 
 
 

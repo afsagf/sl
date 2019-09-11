@@ -16,20 +16,24 @@ public interface Au_userMapper2 {
     Integer updateByUser(Au_user user);
 
     //删除用户
-    Integer deleteById(Integer id);
+    Integer deleteById(Long id);
 
     //修改登录密码
-    Integer updateLoginPwd(Integer id, String pwd);
+    Integer updateLoginPwd(Long id, String pwd);
 
     //修改二级密码
-    Integer updateSecondPwd(Integer id, String pwd);
+    Integer updateSecondPwd(Long id, String pwd);
 
     //模糊搜索
     List<Au_user> selectBySearch(String str);
 
     //验证登录密码
     //验证二级密码
-    //通过session比对验证
+    //通过selectById比对验证
+
+    //查看当前用户
+    Au_user selectById(Long id);
+
 
 
 }
