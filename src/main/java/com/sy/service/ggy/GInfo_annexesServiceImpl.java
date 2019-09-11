@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-public class Info_annexesServiceImpl implements Info_annexesService {
+public class GInfo_annexesServiceImpl implements GInfo_annexesService {
     @Autowired
     Info_annexesMapper infoAnnexesMapper;
     @Override

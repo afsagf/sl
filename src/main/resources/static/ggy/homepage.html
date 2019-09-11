@@ -3,23 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>首页</title>
-    <link rel="stylesheet" href="../layui/css/layui.css"  media="all">
     <style>
         .outContain{
-          width: 500px;
+          /*width: 500px;*/
             position: absolute;
             left:210px ;
-            top: 120px;
+            top: 70px;
         }
         .outContain li{
             list-style: none;
-            width: 100%;
+            /*width: 100%;*/
             height: 30px;
             /*border: 1px solid red;*/
 
         }
         .left{
             float: left;
+            margin-right: 100px;
+            max-width: 700px;
+            overflow: hidden;
+            white-space:nowrap;
+            text-overflow:ellipsis;
+            cursor: pointer;
+        }
+        .left:hover{
+            color: orange;
         }
         .right{
             float: right;
@@ -38,10 +46,16 @@
             float: right;
             margin-right: 20px;
         }
-        .title{
+        .affichetitle{
             height: 30px;
             width: 100%;
             line-height: 30px;
+        }
+        .informationtitle{
+            height: 30px;
+            width: 100%;
+            line-height: 30px;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -50,35 +64,21 @@
 
 </div>
 <div class="outContain">
-    <div class="title">
+    <div class="affichetitle">
         <div class="notice"><i class="layui-icon">&#xe623;</i>公告栏</div>
         <div class="more">»更多</span></div>
     </div>
     <hr>
-    <ul>
-        <li>
-            <div class="left"><i class="layui-icon">&#xe609;</i>多行为损害了经销商和公司的利益</div>
-            <div class="right">2013-12-13</div>
-        </li>
-        <li>
-            <div class="left">多行为损害了经销商和公司的利益</div>
-            <div class="right">2013-12-13</div>
-        </li>
+    <ul class="affiche">
+
     </ul>
-    <div class="title">
-        <div class="notice"><i class="layui-icon">&#xe623;</i>公告栏</div>
+    <div class="informationtitle">
+        <div class="notice"><i class="layui-icon">&#xe623;</i>资讯栏</div>
         <div class="more">»更多</span></div>
     </div>
     <hr>
-    <ul>
-        <li>
-            <div class="left"><i class="layui-icon">&#xe609;</i>多行为损害了经销商和公司的利益</div>
-            <div class="right">2013-12-13</div>
-        </li>
-        <li>
-            <div class="left">多行为损害了经销商和公司的利益</div>
-            <div class="right">2013-12-13</div>
-        </li>
+    <ul class="information">
+
     </ul>
 </div>
 
@@ -88,7 +88,48 @@
 <script src="../layui/layui.all.js"></script>
 <script src="../jquery/jquery.js"></script>
 <script>
-    $("#menu").load("SLmain.html")
+    //引入头部和侧边
+    $("#menu").load("../SLmain.html")
+    //公告和资讯渲染
+    $.ajax({
+        url:"/pageShow"
+        ,type:"get"
+        ,dataType:"json"
+        ,async : false
+        ,success:function (jsonData) {
+            console.log(jsonData)
+            var afficheHtml=``;
+            var informationHtml=``;
+            if(jsonData.success==1){
+                $.each(jsonData.data.afficheList,function (index,eachObj) {
+                    afficheHtml=afficheHtml+`<li>
+                                                <div class="left Aff" data-id="${eachObj.id}"><i class="layui-icon" >&#xe609;</i>${eachObj.title}</div>
+                                                <div class="right">${eachObj.publishTime}</div>
+                                            </li>`
+                })
+                $.each(jsonData.data.informationList,function (index,eachObj) {
+                    informationHtml=informationHtml+`<li>
+                                                <div class="left Inf" data-id="${eachObj.id}"><i class="layui-icon" >&#xe609;</i>${eachObj.title}</div>
+                                                <div class="right">${eachObj.publishTime}</div>
+                                            </li>`
+                })
+                $(".affiche").html(afficheHtml)
+                $(".information").html(informationHtml)
+            }
+        }
+        ,error:function (res) {
+            console.log("ajax提交错误")
+        }
+    })
+    //公告和资讯点击事件
+    $(".outContain").on("click",".Aff",function () {
+        var id=$(this).attr("data-id")
+        console.log(id)
+    })
+    $(".outContain").on("click",".Inf",function () {
+        var id=$(this).attr("data-id")
+        console.log(id)
+    })
 </script>
 </body>
 </html>
