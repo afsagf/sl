@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../jquery/jquery.js"></script>
+        <link rel="stylesheet" href="../layui/css/layui.css">
+    </head>
+    <body>
+        <div id="menu">
+
+        </div>
+        <div style=" width: 1680px;position: absolute;left:210px ;top: 70px;">
+            <div>
+                <h2>电子银行   》内部转账</h2>
+            </div>
+            <hr class="layui-bg-black">
+            <p>当前余额 3800.0（元）</p>
+            <div>
+                转账目标会员：<input type="text" class="layui-input-block" ><i style="color: red;margin-left: 20px">(接收转帐的会员用户名必须填写正确，不能给註册会员转帐。）</i>
+
+            </div>
+            <div style="margin-left: 30px;margin-top: 20px">
+                转账金额：<input type="text" class="layui-input-block" ><a href="/static/lg/recharge.html" style="color: #01AAED;margin-left: 20px">   余额不足？马上汇款充值</a>
+            </div>
+            <div style="margin-left: 30px;margin-top: 20px">
+                二级密码：<input type="text" class="layui-input-block" ><a href="/static/lg/recharge.html" style="color: red;margin-left: 20px">   请输入二级密码</a>
+            </div>
+            <div style="float: right">
+                <button type="button" class="layui-btn layui-btn-normal next"> 提交</button>
+
+            </div>
+
+        </div>
+        
+    </body>
+    <script>
+        $("#menu").load("/static/SLmain.html")
+    </script>
+</html>

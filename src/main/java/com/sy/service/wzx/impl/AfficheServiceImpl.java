@@ -28,7 +28,7 @@ public class AfficheServiceImpl implements AfficheService {
             throw new SLException("请输入完整信息");
         } else {
             affiche.setPublisher(userMapper2.selectById(id).getLoginCode());
-            affiche.setPublishtime(new Date());
+            affiche.setPublishTime(new Date());
             i = afficheMapper.insert(affiche);
         }
         return i > 0;

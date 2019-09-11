@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../jquery/jquery.js"></script>
+        <link rel="stylesheet" href="../layui/css/layui.css">
+    </head>
+    <body>
+        <div id="menu">
+
+        </div>
+        <div style=" width: 1680px;position: absolute;left:210px ;top: 70px;">
+            <div>
+                <h2>电子银行   》消费账户</h2>
+            </div>
+            <hr class="layui-bg-black">
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">选择日期</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                        </div>
+                        <label class="layui-form-label">to</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="date" id="date1" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <button type="button" class="layui-btn layui-btn-normal next"> 查询</button>
+
+                </div>
+            </form>
+        </div>
+
+    </body>
+    <script src="../layui/layui.all.js"></script>
+    <script>
+        layui.use(['form', 'layedit', 'laydate'], function(){
+            var form = layui.form
+                ,layer = layui.layer
+                ,layedit = layui.layedit
+                ,laydate = layui.laydate;
+            laydate.render({
+                elem: '#date'
+            });
+            laydate.render({
+                elem: '#date1'
+            });
+        })
+        $("#menu").load("/static/SLmain.html")
+    </script>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../jquery/jquery.js"></script>
+        <link rel="stylesheet" href="../layui/css/layui.css">
+    </head>
+    <body>
+        <script src="../layui/layui.all.js"></script>
+        <div id="menu">
+
+        </div>
+        <div style=" width: 1680px;position: absolute;left:210px ;top: 70px;">
+            <div>
+                <h2>购物管理   》重销购货</h2>
+            </div>
+            <hr class="layui-bg-black">
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">单号</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">会员用户名</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" lay-verify="required|number" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">销售类别</label>
+                        <div class="layui-input-inline">
+                            <select name="modules" lay-verify="required" lay-search="">
+                                <option value="">请选择</option>
+                                <option value="1">报单购物</option>
+                                <option value="2">重销购物</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="layui-btn layui-btn-normal">查询</button>
+                </div>
+            </form>
+            <table class="layui-table">
+                <colgroup>
+                    <col width="150">
+                    <col width="200">
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>选择</th>
+                        <th>编号</th>
+                        <th>套餐标题</th>
+                        <th>零售价</th>
+                        <th>优惠价</th>
+                        <th>说明</th>
+                        <th>数量</th>
+                    </tr>
+                </thead>
+                <tbody id="list">
+                    <!--<tr>-->
+                    <!--<td><input type="checkbox"name="vid"></td>-->
+                    <!--<td>vid</td>-->
+                    <!--<td>标题</td>-->
+                    <!--<td>5000</td>-->
+                    <!--<td>4000</td>-->
+                    <!--<td>骗人的鬼</td>-->
+                    <!--<td><input type="text"></td>-->
+                    <!--</tr>-->
+
+                </tbody>
+            </table>
+            <div style=" text-align:center">
+                <div id="demo20" style="color: #01AAED"></div>
+            </div>
+            <button type="button" class="layui-btn layui-btn-normal">删除</button>
+        </div>
+    </body>
+    <script src="../layui/layui.all.js"></script>
+    <script>
+        layui.use(['form','laypage', 'layer'], function(){
+            var laypage = layui.laypage
+                ,layer = layui.layer
+                ,form = layui.form;
+            //模拟
+            var data=[{"id":4,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":3,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},];
+            //分页
+            laypage.render({
+                elem: 'demo20'
+                ,count: data.length
+                ,jump: function(obj){
+                    //模拟渲染
+                    document.getElementById('list').innerHTML = function(){
+                        var arr = []
+                            ,thisData = data.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+                        layui.each(thisData, function(index, item){
+                            arr.push(`<tr>
+                    <td><input type="checkbox"name="vid"></td>
+                    <td>`+item.id+`</td>
+                    <td>`+item.name+`</td>
+                    <td>`+item.name+`</td>
+                    <td>`+item.name+`</td>
+                    <td>`+item.name+`</td>
+                    <td><input type="text"></td>
+                </tr>`);
+                        });
+                        return arr.join('');
+                    }();
+                }
+            });
+        })
+        $("#menu").load("/static/SLmain.html")
+    </script>
+</html>

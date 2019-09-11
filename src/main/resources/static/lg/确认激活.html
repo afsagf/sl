@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../jquery/jquery.js"></script>
+        <link rel="stylesheet" href="../layui/css/layui.css">
+    </head>
+    <body>
+        <div id="menu">
+
+        </div>
+        <div style=" width: 1680px;position: absolute;left:210px ;top: 70px;">
+            <div>
+                <h2 >购物管理   》确认激活</h2>
+            </div>
+            <hr class="layui-bg-black">
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">单号</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">用户名</label>
+                        <div class="layui-input-inline">
+                            <input type="tel" name="url" lay-verify="url" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">选择日期</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                        </div>
+                        <label class="layui-form-label">to</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="date" id="date1" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+
+                    <button type="button" class="layui-btn layui-btn-normal">查询</button>
+                </div>
+            </form>
+            <table class="layui-table">
+                <colgroup>
+                    <col width="150">
+                    <col width="200">
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>选择</th>
+                        <th>单号</th>
+                        <th>会员用户名</th>
+                        <th>收货人姓名</th>
+                        <th>日期</th>
+                        <th>时间</th>
+                        <th>购货金额</th>
+                        <th>管理费</th>
+                    </tr>
+                </thead>
+                <tbody id="list">
+
+                </tbody>
+            </table>
+            <div style=" text-align:center">
+                <div id="demo20" style="color: #01AAED"></div>
+            </div>
+            <div style="clear: both">
+            </div>
+            <div style="float: right">
+                <button type="button" class="layui-btn layui-btn-normal next"> 下一步</button>
+
+            </div>
+        </div>
+    </body>
+    <script src="../layui/layui.all.js"></script>
+    <script>
+        layui.use(['form', 'layedit', 'laydate'], function(){
+            var form = layui.form
+                ,layer = layui.layer
+                ,layedit = layui.layedit
+                ,laydate = layui.laydate;
+            laydate.render({
+                elem: '#date'
+            });
+            laydate.render({
+                elem: '#date1'
+            });
+            form.on('submit(demo1)', function(data){
+                layer.alert(JSON.stringify(data.field), {
+                    title: '最终的提交信息'
+                })
+                return false;
+            });
+
+        })
+
+        layui.use(['laypage', 'layer'], function(){
+            var laypage = layui.laypage
+                ,layer = layui.layer;
+            //模拟
+            var data=[{"id":4,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":3,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},
+                {"id":1,"user":1,"name":1,"date":"2019-01-01","time":"12:10","money":4500,"sale":600},];
+            //分页
+            laypage.render({
+                elem: 'demo20'
+                ,count: data.length
+                ,jump: function(obj){
+                    //模拟渲染
+                    document.getElementById('list').innerHTML = function(){
+                        var arr = []
+                            ,thisData = data.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+                        layui.each(thisData, function(index, item){
+                            arr.push(`<tr>
+                            <td><input type="radio" name="user" value="`+item.id+`"></td>
+                                <td>`+item.id+`</td>
+                                <td>`+item.user+`</td>
+                                <td>`+item.name+`</td>
+                                <td>`+item.date+`</td>
+                                <td>`+item.time+`</td>
+                            <td>`+item.money+`</td>
+                            <td>`+item.sale+`</td>
+                            </tr>`);
+                        });
+                        return arr.join('');
+                    }();
+                }
+            });
+        })
+        var id;
+        $(".next").click(function () {
+            id=$("input[name='user']:checked").val()
+            console.log(id)
+            layer.open({
+                type: 1,
+                title:'提示',
+                content:'  <div class="layui-inline" style="margin-top: 20px    ">\n' +
+                    '                    <label class="layui-form-label" style="width: 100px">请输入二级密码</label>\n' +
+                    '                    <div class="layui-input-inline">\n' +
+                    '                        <input type="tel" name="url" lay-verify="url" autocomplete="off" class="layui-input">\n' +
+                    '                    </div>\n' +
+                    '                </div>         <button type="button" class="layui-btn layui-btn-normal continue"style="margin-left: 350px;margin-top: 40px"> 下一步</button>\n',
+                area:['450px', '200px'],
+                btnAlign: 'c',
+                success: function(layero) {
+                    var btn = layero.find('.layui-layer-btn');
+                    btn.find('.layui-layer-btn0').attr({
+                        href: 'http://www.layui.com/'
+                        ,target: '_blank'
+                    })
+                }
+
+            })
+
+        })
+
+        $("#menu").load("/static/SLmain.html")
+    </script>
+</html>

@@ -11,4 +11,10 @@
     <select id="selectUserByID" resultType="com.sy.model.Au_user" >
      select * from au_user where id=#{id}
     </select>
+    <select id="selectAll" resultType="com.sy.model.Au_user" >
+     select * from au_user where id!=#{id} and loginCode like #{search} order by lastUpdateTime desc
+    </select>
+    <update id="updateUserstate" parameterType="com.sy.model.Au_user" >
+
+    </update>
 </mapper>

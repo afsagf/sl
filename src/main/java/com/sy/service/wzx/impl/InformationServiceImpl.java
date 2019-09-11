@@ -1,5 +1,6 @@
 package com.sy.service.wzx.impl;
 
+
 import com.sy.exception.SLException;
 import com.sy.mapper.wzx.Au_userMapper2;
 import com.sy.mapper.wzx.InformationMapper;
@@ -27,10 +28,10 @@ public class InformationServiceImpl implements InformationService {
     public boolean verify(Information information) throws SLException {
         if (information.getTitle() == null || "".equals(information.getTitle())
                 || information.getContent() == null || "".equals(information.getContent())
-                || information.getTypeid() == null
-                || information.getTypename() == null || "".equals(information.getTypename())
-                || information.getFilename() == null || "".equals(information.getFilename())
-                || information.getFilepath() == null || "".equals(information.getFilepath())
+                || information.getTypeId() == null
+                || information.getTypeName() == null || "".equals(information.getTypeName())
+                || information.getFileName() == null || "".equals(information.getFileName())
+                || information.getFilePath() == null || "".equals(information.getFilePath())
         ) {
             throw new SLException("请输入完整信息");
         } else {
@@ -43,8 +44,8 @@ public class InformationServiceImpl implements InformationService {
         Integer i = null;
         if (informationService.verify(information)) {
             information.setPublisher(userMapper2.selectById(id).getLoginCode());
-            information.setPublishtime(new Date());
-            information.setUploadtime(new Date());
+            information.setPublishTime(new Date());
+            information.setUploadTime(new Date());
             i = informationMapper.insert(information);
         }
         return i > 0;
@@ -54,7 +55,7 @@ public class InformationServiceImpl implements InformationService {
     public boolean modify(Information information) throws SLException {
         Integer i = null;
         if (informationService.verify(information)) {
-            information.setUploadtime(new Date());
+            information.setUploadTime(new Date());
             i = informationMapper.update(information);
         }
         return i > 0;
