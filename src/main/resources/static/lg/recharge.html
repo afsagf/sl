@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../jquery/jquery.js"></script>
+        <link rel="stylesheet" href="../layui/css/layui.css">
+    </head>
+    <body>
+        <div id="menu">
+
+        </div>
+        <div style=" width: 1680px;position: absolute;left:210px ;top: 70px;">
+            <div>
+                <h2>电子银行   》汇款充值</h2>
+            </div>
+            <hr class="layui-bg-black">
+
+            <form class="layui-form" action="">
+                <div  style="margin-left: 40px" class="layui-inline time" >
+                    汇款日期:
+
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="layui-inline">
+                    <label class="layui-form-label">汇款金额</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="money" id="money"   autocomplete="off" class="layui-input">(CNY)
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">摘要</label>
+                    <div class="layui-input-block">
+                        <textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+                    </div>
+                </div>
+                <p class="order"></p>
+                <button type="button" class="layui-btn layui-btn-normal next">提交</button>
+            </form>
+        </div>
+        
+    </body>
+    <script src="../layui/layui.all.js"></script>
+
+    <script>
+        layui.use(['form', 'layedit', 'laydate'], function(){
+            var form = layui.form
+                ,layer = layui.layer
+                ,layedit = layui.layedit
+                ,laydate = layui.laydate;
+            laydate.render({
+                elem: '#date'
+            });
+        })
+        $("#menu").load("/static/SLmain.html")
+
+        function getCurrentDate(format) {
+            var now = new Date();
+            var year = now.getFullYear(); //得到年份
+            var month = now.getMonth();//得到月份
+            var date = now.getDate();//得到日期
+            var day = now.getDay();//得到周几
+            var hour = now.getHours();//得到小时
+            var minu = now.getMinutes();//得到分钟
+            var sec = now.getSeconds();//得到秒
+            month = month + 1;
+            if (month < 10) month = "0" + month;
+            if (date < 10) date = "0" + date;
+            if (hour < 10) hour = "0" + hour;
+            if (minu < 10) minu = "0" + minu;
+            if (sec < 10) sec = "0" + sec;
+            var time = "";
+            //精确到天
+            if(format==1){
+                time = year + "-" + month + "-" + date;
+            }
+            //精确到分
+            else if(format==2){
+                time = year + "-" + month + "-" + date+ " " + hour + ":" + minu + ":" + sec;
+            }
+            return time;
+        }
+        var b=getCurrentDate(1)
+        $(".time").append(b)
+
+        var c=`<div class="noshow">
+                <p>汇款日期：`+b+`</p>
+                <p>汇款金额：`+$("input[name='money']").val()+`</p>
+                <p>汇款摘要：`+$("input[name='desc']").val()+`</p>
+                <p>单号：`+a+`</p>
+            </div>`
+
+
+        function random_No(j) {
+            var random_no = "";
+            for (var i = 0; i < j; i++) //j位随机数，用以加在时间戳后面。
+            {
+                random_no += Math.floor(Math.random() * 10);
+            }
+            // random_no = new Date().getTime() + random_no;
+            return random_no;
+        };
+        var a="单号：  "+  random_No(11)
+        $(".order").append(a)
+        $(".next").click(function () {
+            layer.open({
+                type: 1,
+                title:'确认汇款信息',
+                content:c,
+                area:['400px', '300px'],
+                btn: ['确定', '关闭'],
+                btnAlign: 'c',
+                success: function(layero) {
+                    var btn = layero.find('.layui-layer-btn');
+                    btn.find('.layui-layer-btn0').attr({
+                        href: '/static/lg/test.html'
+                        ,target: '_self'
+                    })
+                    }
+
+
+            })
+        })
+
+
+        
+
+
+    </script>
+</html>
