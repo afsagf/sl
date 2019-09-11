@@ -7,66 +7,64 @@
         <link rel="stylesheet" href="../layui/css/layui.css">
     </head>
     <body>
-        <div>
-            <h2>购物管理   》报单购货</h2>
-        </div>
-        <hr class="layui-bg-black">
-        <div>
-            <p>当前余额：                3800元   <a href="" style="color: #01AAED;margin-left: 20px">   余额不足？马上汇款</a></p>
-            报单购货会员用户名：<input type="text">
-            <br>
-            以下报单級別必须选择其一:
+        <div id="menu">
 
-            <div class="layui-row layui-col-space10">
-                <div class="layui-col-md4">
-                    <input type="radio" name="category" value="消費会员：" title="消費会员：">
-                    <br>
-                    <br>
-                    消费金额：4600元
-                    <br>
-                    PV ： 300
-                    <br>
-                    综合服务费： 690元
-                </div>
-                <div class="layui-col-md4">
-                    <input type="radio" name="category" value="VIP会员：" title="VIP会员：">
-                    <br>
-                    <br>
-                    消费金额 ：14600元
-                    <br>
-                    PV： 900
-                    <br>
-                    综合服务费： 1500元
-                </div>
-                <div class="layui-col-md4">
-                    <input type="radio" name="category" value="加盟店：" title="加盟店：">
-                    <br>
-                    <br>
-                    消费金额28800元
-                    <br>
-                    PV：1500
-                    <br>
-                    服务费 2800元
-                </div>
             </div>
+        <div style=" width: 1680px;position: absolute;left:210px ;top: 70px;">
             <div>
-                收货地址：   中国中关村112号
-                <br>
-                快递类型：    EMS
-                <br>
-                邮编：        01010
+                <h2>购物管理   》报单购货</h2>
             </div>
-            <div style="float: right">
-                <button type="button" class="layui-btn layui-btn-normal next"> 下一步</button>
+            <hr class="layui-bg-black">
+            <div >
+                <p>当前余额：                3800元   <a href="" style="color: #01AAED;margin-left: 20px">   余额不足？马上汇款</a></p>
+                报单购货会员用户名：<input type="text">
+                <br>
+                以下报单級別必须选择其一:
+
+                <div class="layui-row layui-col-space10">
+                    <div class="layui-col-md4">
+                        <input type="radio" name="category" value="消費会员：" title="消費会员：">
+                        <br>
+                        <br>
+                        消费金额：4600元
+                        <br>
+                        PV ： 300
+                        <br>
+                        综合服务费： 690元
+                    </div>
+                    <div class="layui-col-md4">
+                        <input type="radio" name="category" value="VIP会员：" title="VIP会员：">
+                        <br>
+                        <br>
+                        消费金额 ：14600元
+                        <br>
+                        PV： 900
+                        <br>
+                        综合服务费： 1500元
+                    </div>
+                    <div class="layui-col-md4">
+                        <input type="radio" name="category" value="加盟店：" title="加盟店：">
+                        <br>
+                        <br>
+                        消费金额28800元
+                        <br>
+                        PV：1500
+                        <br>
+                        服务费 2800元
+                    </div>
+                </div>
+                <div>
+                    收货地址：   中国中关村112号
+                    <br>
+                    快递类型：    EMS
+                    <br>
+                    邮编：        01010
+                </div>
+                <div style="float: right">
+                    <button type="button" class="layui-btn layui-btn-normal next"> 下一步</button>
+                </div>
             </div>
         </div>
-        <!--<div>-->
-            <!--<i class="layui-icon" style="color: mediumspringgreen">&#xe605;报单购货成功</i>-->
-            <!--<br>-->
-            <!--<p style="color: #01AAED">马上去激活购货吗？</p>-->
-        <!--</div>-->
-
-
     </body>
     <script src="../layui/layui.all.js"></script>
     <script>
@@ -112,17 +110,13 @@
                                     ,target: '_blank'
                                 })
                             }
-
                         })
                     })
 
-
-
                 }
             })
-
-
         })
+        $("#menu").load("/static/SLmain.html")
     </script>
 
 </html>

@@ -5,9 +5,22 @@
         <title>Title</title>
         <script src="../jquery/jquery.js"></script>
         <link rel="stylesheet" href="../layui/css/layui.css">
+        <style>
+            p{
+                font-size: 20px;
+            }
+            li{
+                font-size: 30px;
+            }
+        </style>
     </head>
+
     <body>
-        <div>
+
+        <div id="menu">
+
+        </div>
+        <div style=" width: 1680px;position: absolute;left:210px ;top: 70px;">
             <div>
                 <h2>购物管理   》报单购货</h2>
             </div>
@@ -41,7 +54,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div style="float: right">
+                    <div style="float: right;margin-top: 200px">
                         <button type="button" class="layui-btn layui-btn-normal continue"> 好的继续</button>
 
                     </div>
@@ -64,5 +77,6 @@
            $(".chooseuser").css('display','block')
            $(".explain").css('display','none')
        }
+        $("#menu").load("/static/SLmain.html")
     </script>
 </html>

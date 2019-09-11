@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../jquery/jquery.js"></script>
+        <link rel="stylesheet" href="../layui/css/layui.css">
+    </head>
+    <body>
+        <div id="menu">
+
+        </div>
+        <div style=" width: 1680px;position: absolute;left:210px ;top: 70px;">
+            <div>
+                <h2>电子银行   》申请提现</h2>
+            </div>
+            <hr class="layui-bg-black">
+            <div class="show">
+                <div style="width: 600px;height: 500px;font-size:20px;margin: 0 auto;background-image: url(../images/lg/background.jpg);background-size:contain">
+                    <div style="padding: 150px">
+                        您好，根据公司的提现规定，每月10号之前申请提现，30号发放，20号之前申请提现，次月10号发放，每月30号之前申请提现，次月20号发放，提现有5%手续费（国际汇款费用，汇率差）。 谢谢!
+                    </div>
+                </div>
+                <div style="float: right">
+                    <button type="button" class="layui-btn layui-btn-normal next">好的继续</button>
+
+                </div>
+            </div>
+
+            <div class="none" style="width: 800px;height: 500px;margin: 0 auto;display: none">
+                <div style="margin-top: 20px;margin-left: 125px">
+                    余额：   1800:00元
+                </div>
+                <div style="margin-top: 20px;margin-left: 125px">
+                    提现金额：<input type="text" class="layui-input-block"><i style="color: red">（提现金额不能大于余额）</i>
+                </div>
+                <div style="margin-top: 20px">
+                    银行所在地址及支行详细名称：<input type="text"class="layui-input-block"><i style="color: red">*</i>
+                </div>
+                <div style="margin-top: 20px;margin-left: 125px">
+                    银行名称：<input type="text" class="layui-input-block"><i style="color: red">*</i>
+                </div>
+                <div style="margin-top: 20px;margin-left: 110px">
+                    银行开户名：<input type="text"class="layui-input-block"><i style="color: red">*</i>
+                </div>
+                <div style="margin-top: 20px;margin-left: 125px">
+                    银行卡号：<input type="text" class="layui-input-block"><i style="color: red">*</i>
+                </div>
+                <div style="margin-top: 20px;margin-left: 125px">
+                    <button type="button" class="layui-btn layui-btn-normal next"> 提交申请</button>
+                </div>
+            </div>
+
+        </div>
+        
+    </body>
+    <script>
+        $("#menu").load("/static/SLmain.html")
+        $(".next").click(e)
+        function e() {
+            $(".show").css('display','none')
+            $(".none").css('display','block')
+        }
+        $("#menu").load("/static/SLmain.html")
+    </script>
+</html>
