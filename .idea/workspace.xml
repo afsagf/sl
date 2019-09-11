@@ -1,39 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f97228c-4329-485c-9d2e-72998145d27d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sy/controller/ggy/Au_userController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sy/controller/ggy/Au_userController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sy/mapper/ggy/Au_userMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sy/mapper/ggy/Au_userMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sy/mapper/ggy/Au_userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sy/mapper/ggy/Au_userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sy/model/Affiche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sy/model/Affiche.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sy/model/Information.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sy/model/Information.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sy/service/ggy/Au_userService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sy/service/ggy/Au_userService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sy/service/ggy/Au_userServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sy/service/ggy/Au_userServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sy/service/ggy/Info_annexesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sy/service/ggy/GInfo_annexesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sy/service/ggy/Info_annexesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sy/service/ggy/GInfo_annexesServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ggy/SLmain.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/SLmain.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ggy/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/ggy/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ggy/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ggy/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ggy/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/controller/ggy/Au_userController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sy/controller/ggy/Au_userController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/mapper/ggy/Au_userMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sy/mapper/ggy/Au_userMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/mapper/ggy/Au_userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sy/mapper/ggy/Au_userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/model/Affiche.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sy/model/Affiche.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/model/Information.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sy/model/Information.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/service/ggy/Au_userService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sy/service/ggy/Au_userService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/service/ggy/Au_userServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sy/service/ggy/Au_userServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/service/ggy/Info_annexesService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/service/ggy/Info_annexesServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/ggy/SLmain.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/ggy/SLmain.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/ggy/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/ggy/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ggy/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ggy/test.class" afterDir="false" />
-    </list>
+    <list default="true" id="7f97228c-4329-485c-9d2e-72998145d27d" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -98,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sy/mapper/ggy/Au_userMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -212,8 +180,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-24" />
-    <option name="y" value="52" />
+    <option name="x" value="-12" />
+    <option name="y" value="116" />
     <option name="width" value="1940" />
     <option name="height" value="874" />
   </component>
@@ -423,7 +391,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568186437507" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568186677774" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -499,7 +467,7 @@
       <workItem from="1568023665664" duration="8099000" />
       <workItem from="1568076271791" duration="32166000" />
       <workItem from="1568112513746" duration="6262000" />
-      <workItem from="1568164338043" duration="19252000" />
+      <workItem from="1568164338043" duration="19557000" />
     </task>
     <task id="LOCAL-00001" summary="122">
       <created>1568032140429</created>
@@ -557,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568112603785</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="20190911 01">
+      <created>1568186480816</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1568186480817</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -593,11 +568,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65779000" />
+    <option name="totallyTimeSpent" value="66084000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="228" y="28" width="1940" height="1091" extended-state="0" />
-    <editor active="true" />
+    <frame x="-96" y="119" width="1940" height="874" extended-state="1" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20851064" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -609,7 +583,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32911393" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4997138" visible="true" weight="0.14196242" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4997138" weight="0.14196242" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -643,7 +617,8 @@
     <MESSAGE value="20190910" />
     <MESSAGE value="20190910 02" />
     <MESSAGE value="20190910 04" />
-    <option name="LAST_COMMIT_MESSAGE" value="20190910 04" />
+    <MESSAGE value="20190911 01" />
+    <option name="LAST_COMMIT_MESSAGE" value="20190911 01" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/images/ggy/login/bg.jpg">
@@ -1111,7 +1086,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sy/mapper/ggy/Au_userMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
