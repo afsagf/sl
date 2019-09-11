@@ -3,11 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="7f97228c-4329-485c-9d2e-72998145d27d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sy/mapper/wzx/AfficheMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sy/mapper/wzx/AfficheMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sy/mapper/wzx/AfficheMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sy/mapper/wzx/AfficheMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sy/mapper/wzx/Au_userMapper2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sy/mapper/wzx/Au_userMapper2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sy/mapper/wzx/Au_userMapper2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sy/mapper/wzx/Au_userMapper2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ggy/homepage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/interceptor/LoginInterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/mapper/ggy/Au_functionMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/mapper/ggy/Info_annexesMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/model/Au_user.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/model/Data_dictionary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/model/Multi_lan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/model/Order_info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/model/User_account_log_201404.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/model/User_buy_bonus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/model/User_cash.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/model/User_place.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/model/User_point.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/service/ggy/Au_functionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/service/ggy/Au_userService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sy/tools/RedisAPI.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,7 +46,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sy/mapper/wzx/Au_userMapper2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
+            <state relative-caret-position="750">
               <caret line="27" column="32" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -45,11 +55,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sy/mapper/wzx/AfficheMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="38" column="67" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
+            <state relative-caret-position="1350">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sy/mapper/wzx/InformationMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="9" column="61" lean-forward="true" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -57,7 +76,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sy/mapper/wzx/AfficheMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
+            <state relative-caret-position="570">
               <caret line="21" column="48" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="48" />
             </state>
           </provider>
@@ -131,9 +150,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\apache-maven-3.6.0-bin\apache-maven-3.6.0\repo" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../apache-maven-3.6.0-bin/apache-maven-3.6.0" />
-        <option name="userSettingsFile" value="D:\apache-maven-3.6.0-bin\apache-maven-3.6.0\conf\settings.xml" />
+        <option name="localRepository" value="E:\4.SSM1\resp\mavenrepositories" />
+        <option name="mavenHome" value="C:/Maven/apache-maven-3.5.3" />
+        <option name="userSettingsFile" value="C:\Maven\apache-maven-3.5.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -154,24 +173,11 @@
           <item name="SL_Shopping" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
         </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="SL_Shopping" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-          <item name="clean" type="36feed69:MavenProjectsStructure$PluginNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="SL_Shopping" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-          <item name="spring-boot" type="36feed69:MavenProjectsStructure$PluginNode" />
-        </path>
       </expand>
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="960" />
     <option name="width" value="960" />
     <option name="height" value="1040" />
   </component>
@@ -183,6 +189,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -360,16 +368,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568118213482" />
-    <property name="last_opened_file_path" value="E:/4.SSM/0315SSM/MyBatis" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568164101669" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../备份/SL_Shopping" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -443,6 +449,7 @@
       <updated>1568023662065</updated>
       <workItem from="1568023665664" duration="8099000" />
       <workItem from="1568076271791" duration="32166000" />
+      <workItem from="1568163831754" duration="53000" />
     </task>
     <task id="LOCAL-00001" summary="122">
       <created>1568032140429</created>
@@ -493,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568112132558</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="10号晚">
+      <created>1568118370301</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1568118370301</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -529,13 +543,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43854000" />
+    <option name="totallyTimeSpent" value="44342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22761194" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23027718" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -557,11 +571,11 @@
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" visible="true" weight="0.078608245" />
+      <window_info anchor="bottom" id="Version Control" order="14" visible="true" weight="0.0780065" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.11219233" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.1119403" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.32985073" />
@@ -579,10 +593,10 @@
     <MESSAGE value="20190910 04" />
     <MESSAGE value="20190910" />
     <MESSAGE value="20190910 02" />
-    <option name="LAST_COMMIT_MESSAGE" value="20190910 02" />
+    <MESSAGE value="10号晚" />
+    <option name="LAST_COMMIT_MESSAGE" value="10号晚" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/ggy/dasfa.html" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/images/ggy/login/bg.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -895,11 +909,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sy/mapper/wzx/Au_userMapper2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
+        <state relative-caret-position="750">
           <caret line="27" column="32" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sy/mapper/wzx/AfficheMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sy/mapper/wzx/AfficheMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="21" column="48" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -910,17 +938,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sy/mapper/wzx/AfficheMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sy/mapper/wzx/InformationMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="21" column="48" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sy/mapper/wzx/AfficheMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="38" column="67" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
+        <state relative-caret-position="270">
+          <caret line="9" column="61" lean-forward="true" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
         </state>
       </provider>
     </entry>
