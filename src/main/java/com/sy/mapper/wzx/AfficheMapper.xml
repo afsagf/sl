@@ -4,19 +4,49 @@
 <mapper namespace="com.sy.mapper.wzx.AfficheMapper">
 
     <!--插入-->
-    <insert id="insert" parameterType="Affiche"></insert>
+    <insert id="insert" parameterType="Affiche">
+        insert into affiche (code,title,content,publisher,publishTime,startTime,endTime) values(
+			#{code},
+			#{title},
+			#{content},
+			#{publisher},
+			#{publishTime},
+			#{startTime},
+			#{endTime}
+			)
+    </insert>
 
     <!--更新-->
-    <update id="update" parameterType="Affiche"></update>
+    <update id="update" parameterType="Affiche">
+        update affiche set
+			code = #{code},
+			title = #{title},
+			content = #{content},
+			publisher = #{publisher},
+			publishTime = #{publishTime},
+			startTime = #{startTime},
+			endTime = #{endTime}
+		where id = #{id}
+    </update>
 
     <!--删除-->
-    <delete id="delete"></delete>
+    <delete id="delete">
+        delete from affiche where id=#{id}
+    </delete>
 
     <!--管理员查看 逾期不显示-->
-    <select id="selectById" resultType="Affiche"></select>
+    <select id="selectByAdmin" resultType="Affiche">
+        select * from affiche where loginCode=#{loginCode} and NOW() BETWEEN startTime AND endTime order by publishTime desc
+    </select>
 
     <!--用户查看   逾期不显示-->
-    <select id="selectAll" resultType="Affiche"></select>
+    <select id="selectAll" resultType="Affiche">
+        select * from affiche where NOW() BETWEEN startTime AND endTime order by publishTime desc
+    </select>
 
+    <!--修改时查看-->
+    <select id="selectByAid" resultType="Affiche">
+        select * from Affiche where id=#{id}
+    </select>
 
 </mapper>

@@ -4,27 +4,87 @@
 <mapper namespace="com.sy.mapper.wzx.Au_userMapper2">
 
     <!--新增用户-->
-    <insert id="insert" parameterType="Au_user"></insert>
+    <insert id="insert" parameterType="Au_user">
+         insert into au_user (loginCode,password,password2,userName,sex,birthday,cardType,
+         cardTypeName,idCard,country,mobile,email,userAddress,postCode,
+         createTime,referId,referCode,roleId,roleName,userType,userTypeName,
+         isStart,lastUpdateTime,lastLoginTime,bankName,accountHolder,bankAccount,idCardPicPath,bankPicPath) values
+         (#{loginCode},#{password},#{password2},#{userName},#{sex},#{birthday},
+         #{cardType},#{cardTypeName},#{idCard},#{country},#{mobile},#{email},#{userAddress},
+         #{postCode},#{createTime},#{referId},#{referCode},#{roleId},#{roleName},#{userType},
+         #{userTypeName},#{isStart},#{lastUpdateTime},#{lastLoginTime},#{bankName},#{accountHolder},#{bankAccount},#{idCardPicPath},#{bankPicPath})
+    </insert>
 
 
-    <!--检查用户 动态sql-->
-    <select id="selectByUser" parameterType="Au_user"></select>
+    <!--检查用户名是否存在-->
+    <select id="selectByUser" parameterType="Au_user" resultType="Au_user">
+        select * from au_user where loginCode=#{loginCode}
+    </select>
 
 
     <!--更新用户-->
-    <update id="updateByUser" parameterType="Au_user"></update>
+    <update id="updateByUser" parameterType="Au_user">
+        update au_user
+        <set>
+            <if test="loginCode != null">loginCode = #{loginCode},</if>
+            <if test="userName != null">userName = #{userName},</if>
+            <if test="password != null">password = #{password},</if>
+            <if test="password2 != null">password2 = #{password2},</if>
+            <if test="sex != null">sex = #{sex},</if>
+            <if test="birthday != null">birthday = #{birthday},</if>
+            <if test="cardType != null">cardType = #{cardType},</if>
+            <if test="cardTypeName != null">cardTypeName = #{cardTypeName},</if>
+            <if test="idCard != null">idCard = #{idCard},</if>
+            <if test="country != null">country = #{country},</if>
+            <if test="mobile != null">mobile = #{mobile},</if>
+            <if test="email != null">email = #{email},</if>
+            <if test="userAddress != null">userAddress = #{userAddress},</if>
+            <if test="postCode != null">postCode = #{postCode},</if>
+            <if test="createTime != null">createTime = #{createTime},</if>
+            <if test="referId != null">referId = #{referId},</if>
+            <if test="referCode != null">referCode = #{referCode},</if>
+            <if test="roleId != null">roleId = #{roleId},</if>
+            <if test="roleName != null">roleName = #{roleName},</if>
+            <if test="userType != null">userType = #{userType},</if>
+            <if test="userTypeName != null">userTypeName = #{userTypeName},</if>
+            <if test="isStart != null">isStart = #{isStart},</if>
+            <if test="lastUpdateTime != null">lastUpdateTime = #{lastUpdateTime},</if>
+            <if test="lastLoginTime != null">lastLoginTime = #{lastLoginTime},</if>
+            <if test="bankName != null">bankName = #{bankName},</if>
+            <if test="accountHolder != null">accountHolder = #{accountHolder},</if>
+            <if test="bankAccount != null">bankAccount = #{bankAccount},</if>
+            <if test="idCardPicPath != null">idCardPicPath = #{idCardPicPath},</if>
+            <if test="bankPicPath != null">bankPicPath = #{bankPicPath}</if>
+        </set>
+        where id = #{id}
+    </update>
 
 
     <!--删除用户-->
-    <delete id="deleteById"></delete>
+    <delete id="deleteById">
+        delete from au_user where id=#{id}
+    </delete>
 
 
     <!--修改登录密码-->
-    <update id="updateLoginPwd"></update>
+    <update id="updateLoginPwd">
+        update au_user set password=#{password} where id=#{id}
+    </update>
 
 
     <!--修改二级密码-->
-    <update id="updateSecondPwd"></update>
+    <update id="updateSecondPwd">
+        update au_user set password2=#{password2} where id=#{id}
+    </update>
 
+    <!--模糊搜索-->
+    <select id="selectBySearch" resultType="au_user">
+        select * from au_user
+        <where>
+            <if test="loginCode!=null and loginCode!=''">
+                loginCode like  CONCAT('%',#{loginCode},'%')
+            </if>
+        </where>
+    </select>
 
 </mapper>

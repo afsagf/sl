@@ -19,10 +19,13 @@ public interface AfficheMapper {
     Integer delete(Integer id);
 
     //查看 管理员
-    List<Affiche> selectById(Integer id);
+    List<Affiche> selectByAdmin(String loginCode);
 
     //查看 用户
     List<Affiche> selectAll();
+
+    //修改时查看
+    Affiche selectByAid(Integer id);
 
 
 
